@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shailesh Bagade | Lead Salesforce Developer</title>
+<meta name="description" content="Shailesh Bagade - Lead Salesforce Developer with 8.5 years of experience in LWC, Apex, Health Cloud, Service Cloud and Field Service Lightning.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #17283A;
+    --ink-soft: #4A5B6E;
+    --paper: #F6F8FA;
+    --white: #FFFFFF;
+    --cloud: #1D63C9;
+    --sky: #E3EEFB;
+    --line: #D8E0E9;
+    --display: "Bricolage Grotesque", Georgia, serif;
+    --body: "IBM Plex Sans", Arial, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--body);
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--ink);
+    background: var(--paper);
+  }
+  a { color: var(--cloud); }
+  a:focus-visible, button:focus-visible { outline: 3px solid var(--cloud); outline-offset: 3px; border-radius: 4px; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    background: var(--ink);
+    color: var(--white);
+    padding: 64px 0 56px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::after {
+    /* soft cloud shape, a nod to Salesforce */
+    content: "";
+    position: absolute;
+    right: -120px; top: -140px;
+    width: 460px; height: 460px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(29,99,201,.55), rgba(29,99,201,0) 70%);
+    pointer-events: none;
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 40px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+  .photo {
+    width: 180px; height: 180px;
+    border-radius: 50%;
+    border: 4px solid var(--cloud);
+    background: #24405E;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    font-family: var(--display);
+    font-size: 56px;
+    font-weight: 700;
+    color: var(--sky);
+  }
+  .photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .hero h1 {
+    font-family: var(--display);
+    font-weight: 800;
+    font-size: clamp(2.6rem, 6vw, 4.2rem);
+    line-height: 1.02;
+    letter-spacing: -0.02em;
+  }
+  .role {
+    font-family: var(--display);
+    font-weight: 500;
+    font-size: clamp(1.2rem, 2.4vw, 1.5rem);
+    color: #A9C8F0;
+    margin-top: 10px;
+  }
+  .intro {
+    max-width: 60ch;
+    margin-top: 18px;
+    color: #D3DDE8;
+  }
+  .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+  .btn {
+    display: inline-block;
+    padding: 11px 20px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 15px;
+    text-decoration: none;
+    border: 2px solid var(--cloud);
+  }
+  .btn-primary { background: var(--cloud); color: var(--white); }
+  .btn-ghost { color: var(--white); border-color: #4C6B8E; }
+  .btn:hover { filter: brightness(1.12); }
+  .contact-line {
+    margin-top: 22px;
+    font-size: 15px;
+    color: #A9BACB;
+  }
+  .contact-line a { color: #D3DDE8; text-decoration: none; }
+  .contact-line span + span::before { content: "|"; margin: 0 10px; color: #4C6B8E; }
+
+  /* ---------- Sections ---------- */
+  section { padding: 64px 0; }
+  section + section { border-top: 1px solid var(--line); }
+  h2 {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: clamp(1.7rem, 3.4vw, 2.2rem);
+    letter-spacing: -0.01em;
+    margin-bottom: 8px;
+  }
+  .lead { color: var(--ink-soft); max-width: 62ch; margin-bottom: 32px; }
+
+  /* Strengths strip */
+  .focus {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+  .focus h3 { font-family: var(--display); font-size: 1.15rem; margin-bottom: 6px; }
+  .focus p { color: var(--ink-soft); font-size: 16px; }
+  .focus div { border-left: 3px solid var(--cloud); padding-left: 16px; }
+
+  /* Certification wall — the signature element */
+  .cert-groups { display: grid; gap: 28px; }
+  .cert-group h3 {
+    font-family: var(--display);
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: var(--ink-soft);
+  }
+  .cert-group h3 small { font-family: var(--body); font-weight: 400; font-size: 14px; margin-left: 6px; }
+  .certs { display: flex; flex-wrap: wrap; gap: 10px; }
+  .cert {
+    background: var(--white);
+    border: 1.5px solid var(--line);
+    border-radius: 10px;
+    padding: 10px 16px;
+    font-weight: 500;
+    font-size: 15px;
+  }
+  .cert-group.sf .cert { background: var(--sky); border-color: #B9D2F2; color: #123E7C; }
+  .verify { margin-top: 24px; font-size: 15px; color: var(--ink-soft); }
+
+  /* Experience timeline (a real sequence, so a timeline fits) */
+  .timeline { position: relative; padding-left: 28px; }
+  .timeline::before {
+    content: "";
+    position: absolute;
+    left: 6px; top: 8px; bottom: 8px;
+    width: 2px;
+    background: var(--line);
+  }
+  .job { position: relative; margin-bottom: 44px; }
+  .job:last-child { margin-bottom: 0; }
+  .job::before {
+    content: "";
+    position: absolute;
+    left: -28px; top: 8px;
+    width: 14px; height: 14px;
+    border-radius: 50%;
+    background: var(--paper);
+    border: 3px solid var(--cloud);
+  }
+  .job-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 16px; align-items: baseline; }
+  .job h3 { font-family: var(--display); font-size: 1.35rem; font-weight: 700; }
+  .job .when { font-size: 15px; color: var(--ink-soft); font-weight: 500; }
+  .job .title { color: var(--cloud); font-weight: 600; margin-bottom: 14px; }
+  .project { background: var(--white); border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; margin-top: 12px; }
+  .project h4 { font-size: 1rem; font-weight: 600; margin-bottom: 4px; }
+  .project h4 em { font-style: normal; font-weight: 400; color: var(--ink-soft); }
+  .project p { font-size: 16px; color: var(--ink-soft); max-width: 75ch; }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+  .tags span { font-size: 13px; background: var(--paper); border: 1px solid var(--line); border-radius: 6px; padding: 2px 8px; color: var(--ink-soft); }
+
+  /* Skills */
+  .skills { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px 40px; }
+  .skills h3 { font-family: var(--display); font-size: 1.1rem; margin-bottom: 10px; }
+  .skills .tags span { font-size: 14px; background: var(--white); color: var(--ink); padding: 5px 11px; }
+
+  /* Project + achievements */
+  .two-col { display: grid; grid-template-columns: 1.3fr 1fr; gap: 40px; }
+  .feature { background: var(--white); border: 1px solid var(--line); border-radius: 14px; padding: 26px; }
+  .feature h3 { font-family: var(--display); font-size: 1.3rem; margin-bottom: 8px; }
+  .feature p { color: var(--ink-soft); }
+  .awards { list-style: none; display: grid; gap: 18px; }
+  .awards li { border-left: 3px solid var(--cloud); padding-left: 16px; }
+  .awards strong { display: block; font-family: var(--display); font-size: 1.1rem; }
+  .awards span { color: var(--ink-soft); font-size: 16px; }
+
+  /* Contact */
+  .contact { background: var(--ink); color: var(--white); border-top: none; }
+  .contact h2 { color: var(--white); }
+  .contact .lead { color: #D3DDE8; }
+  footer { background: var(--ink); color: #7F93A8; font-size: 14px; padding: 0 0 32px; }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 760px) {
+    body { font-size: 16px; }
+    .hero { padding: 44px 0 40px; }
+    .hero-grid { grid-template-columns: 1fr; gap: 24px; }
+    .photo { width: 130px; height: 130px; font-size: 42px; }
+    .focus, .skills, .two-col { grid-template-columns: 1fr; }
+    section { padding: 48px 0; }
+    .contact-line span { display: block; }
+    .contact-line span + span::before { content: none; }
+  }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  @media print {
+    .hero, .contact, footer { background: #fff !important; color: #000 !important; }
+    .hero::after, .actions { display: none; }
+    .intro, .contact-line, .contact-line a, .role { color: #000 !important; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= HERO ================= -->
+<header class="hero">
+  <div class="wrap hero-grid">
+    <!-- PHOTO: upload your picture as "photo.jpg" to the same repository.
+         Until then, your initials are shown automatically. -->
+    <div class="photo" aria-label="Photo of Shailesh Bagade">
+      <img src="photo.jpg" alt="Shailesh Bagade" onerror="this.remove()">
+      <span aria-hidden="true">SB</span>
+    </div>
+
+    <div>
+      <h1>Shailesh Bagade</h1>
+      <p class="role">Lead Salesforce Developer | LWC, Apex &amp; Health Cloud</p>
+      <p class="intro">
+        8.5 years building Salesforce solutions for global clients in healthcare, insurance,
+        telecom and software. I design Lightning Web Components, Apex and integrations on
+        Health Cloud, Service Cloud and Field Service Lightning, for teams across the USA, UK and Europe.
+      </p>
+
+      <div class="actions">
+        <a class="btn btn-primary" href="mailto:shaileshvbagade@gmail.com">Email me</a>
+        <!-- EDIT: replace with your real LinkedIn URL -->
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener">LinkedIn</a>
+        <!-- Upload your resume as "resume.pdf" to the repository -->
+        <a class="btn btn-ghost" href="resume.pdf" download>Download resume</a>
+      </div>
+
+      <p class="contact-line">
+        <span>Pune, India | Open to international roles</span>
+        <span><a href="mailto:shaileshvbagade@gmail.com">shaileshvbagade@gmail.com</a></span>
+        <!-- Remove the next line if you prefer not to show your phone number publicly -->
+        <span><a href="tel:+918275028550">+91 82750 28550</a></span>
+      </p>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ================= FOCUS ================= -->
+<section>
+  <div class="wrap">
+    <h2>What I bring</h2>
+    <p class="lead">Hands-on development with an eye on how the platform is released and maintained across regions.</p>
+    <div class="focus">
+      <div>
+        <h3>Lightning front end</h3>
+        <p>Custom LWC and Aura components, call-center consoles, community portals and LMS-based apps built on SLDS.</p>
+      </div>
+      <div>
+        <h3>Industry clouds</h3>
+        <p>Health Cloud, Service Cloud and Field Service Lightning for patient care, insurance enrolment and field operations.</p>
+      </div>
+      <div>
+        <h3>Release and DevOps</h3>
+        <p>Multi-country metadata on Git with Jenkins, Azure, Copado and Flosum, certified across all three DevOps tools.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CERTIFICATIONS ================= -->
+<section id="certifications">
+  <div class="wrap">
+    <h2>13 certifications</h2>
+    <p class="lead">Salesforce platform, AI and DevOps credentials.</p>
+
+    <div class="cert-groups">
+      <div class="cert-group sf">
+        <h3>Salesforce <small>7 credentials</small></h3>
+        <div class="certs">
+          <span class="cert">Platform Developer I</span>
+          <span class="cert">JavaScript Developer I</span>
+          <span class="cert">Administrator (ADM 201)</span>
+          <span class="cert">Platform App Builder</span>
+          <span class="cert">AI Specialist</span>
+          <span class="cert">AI Associate</span>
+          <span class="cert">Salesforce Associate</span>
+        </div>
+      </div>
+      <div class="cert-group">
+        <h3>Copado <small>3 credentials</small></h3>
+        <div class="certs">
+          <span class="cert">Copado Developer</span>
+          <span class="cert">Copado Consultant</span>
+          <span class="cert">Copado Administrator</span>
+        </div>
+      </div>
+      <div class="cert-group">
+        <h3>Flosum and other <small>3 credentials</small></h3>
+        <div class="certs">
+          <span class="cert">Flosum Developer</span>
+          <span class="cert">Flosum Admin</span>
+          <span class="cert">JavaScript Developer (OpenAI)</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- EDIT: replace both links with your real Trailhead and credential verification URLs -->
+    <p class="verify">
+      Verify my credentials on the
+      <a href="https://trailhead.salesforce.com/credentials/verification" target="_blank" rel="noopener">Salesforce credential verification page</a>
+      or view my <a href="https://www.salesforce.com/trailblazer/your-id" target="_blank" rel="noopener">Trailhead profile</a>.
+    </p>
+  </div>
+</section>
+
+<!-- ================= EXPERIENCE ================= -->
+<section id="experience">
+  <div class="wrap">
+    <h2>Experience</h2>
+    <p class="lead">Delivery for clients in the USA, UK and Europe through three global consultancies.</p>
+
+    <div class="timeline">
+      <article class="job">
+        <div class="job-head">
+          <h3>Cognizant</h3>
+          <span class="when">Sep 2021 – Present</span>
+        </div>
+        <p class="title">Senior Salesforce Developer (LWC / Salesforce Core)</p>
+
+        <div class="project">
+          <h4>Air Liquide <em>(UK, multi-region)</em></h4>
+          <p>Care monitoring and respiratory equipment delivery for patients, with field agents, territories,
+             appointments, vehicles and delivery orders managed across APAC, EMEA, France, Italy and Core regions.
+             Customised Flows, LWC, Apex, FSL and the Salesforce Mobile App, and managed country-specific metadata in Git.</p>
+          <div class="tags"><span>Field Service Lightning</span><span>LWC</span><span>Apex</span><span>Flows</span><span>Mobile App</span><span>Git</span></div>
+        </div>
+
+        <div class="project">
+          <h4>Humana <em>(USA)</em></h4>
+          <p>Insurance management system on Health Cloud for medical policy enrolment, healthcare data and member
+             inquiries, delivered through a custom LWC call-center application integrated with multiple systems.</p>
+          <div class="tags"><span>Health Cloud</span><span>LWC</span><span>Integrations</span><span>Service Console</span></div>
+        </div>
+      </article>
+
+      <article class="job">
+        <div class="job-head">
+          <h3>IQVIA</h3>
+          <span class="when">Jan 2020 – Aug 2021</span>
+        </div>
+        <p class="title">Senior Salesforce Developer (LWC)</p>
+
+        <div class="project">
+          <h4>Study Hub <em>(USA)</em></h4>
+          <p>Healthcare application for vaccine management and clinical trials, tracking patient life stages and
+             vaccination schedules. Built community LWC components, developed Apex and tests, customised Health Cloud
+             and handled production fixes.</p>
+          <div class="tags"><span>Experience Cloud</span><span>Health Cloud</span><span>LWC</span><span>Apex</span></div>
+        </div>
+      </article>
+
+      <article class="job">
+        <div class="job-head">
+          <h3>Accenture</h3>
+          <span class="when">Feb 2018 – Dec 2019</span>
+        </div>
+        <p class="title">Salesforce Developer</p>
+
+        <div class="project">
+          <h4>Autodesk <em>(USA)</em></h4>
+          <p>Campaign Management module letting marketing and sales teams run campaigns across markets and
+             geographies. Built partner and user portal features with role-based access.</p>
+          <div class="tags"><span>Partner Portal</span><span>Sharing &amp; Security</span><span>Campaigns</span></div>
+        </div>
+
+        <div class="project">
+          <h4>Vodafone <em>(UK)</em></h4>
+          <p>Product supply processes for regional and global product managers across commercial markets.
+             Built custom product management solutions and refined UX templates with the wider team.</p>
+          <div class="tags"><span>Custom Development</span><span>UX Templates</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SKILLS ================= -->
+<section id="skills">
+  <div class="wrap">
+    <h2>Technical skills</h2>
+    <p class="lead">The tools I use day to day.</p>
+    <div class="skills">
+      <div>
+        <h3>Development</h3>
+        <div class="tags"><span>Lightning Web Components</span><span>Aura Components</span><span>Apex</span><span>Async Apex</span><span>JavaScript</span><span>SLDS</span></div>
+      </div>
+      <div>
+        <h3>Clouds and automation</h3>
+        <div class="tags"><span>Health Cloud</span><span>Service Cloud</span><span>Field Service Lightning</span><span>Salesforce Flows</span><span>Pardot</span></div>
+      </div>
+      <div>
+        <h3>Integration and data</h3>
+        <div class="tags"><span>REST / SOAP Integration</span><span>Bulk API</span><span>Data Loader</span><span>Sharing &amp; Security</span></div>
+      </div>
+      <div>
+        <h3>DevOps</h3>
+        <div class="tags"><span>Git</span><span>Jenkins</span><span>Azure DevOps</span><span>Copado</span><span>Flosum</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROJECT & ACHIEVEMENTS ================= -->
+<section id="more">
+  <div class="wrap two-col">
+    <div>
+      <h2>Personal project</h2>
+      <div class="feature">
+        <h3>Generic travel booking platform</h3>
+        <p>A single LWC booking app for buses, trains and ships, using Lightning Message Service. Supports
+           object-specific timings, routes and availability, dynamic date and route selection, and live
+           location tracking with Google Maps route visualisation.</p>
+        <div class="tags"><span>LWC</span><span>LMS</span><span>Google Maps API</span></div>
+        <!-- EDIT: add a GitHub link if the code is public, e.g.
+        <p style="margin-top:12px"><a href="https://github.com/shaileshbagade/your-repo">View code on GitHub</a></p> -->
+      </div>
+    </div>
+    <div>
+      <h2>Achievements</h2>
+      <ul class="awards">
+        <li><strong>Author, <i>The Product Tactics: Unfold Your Customer</i></strong>
+            <span>A book on how technology companies use customer psychology to build habit-forming products.</span></li>
+        <li><strong>Lightning component recognition</strong><span>Cognizant</span></li>
+        <li><strong>Employee of the Month</strong><span>Accenture</span></li>
+      </ul>
+      <h2 style="margin-top:36px">Education</h2>
+      <p><strong>B.E. Computer Engineering</strong><br>
+         <span style="color:var(--ink-soft)">Pune Institute of Computer Technology (PICT), 2013 – 2017</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <h2>Let's talk</h2>
+    <p class="lead">I'm open to Lead Salesforce Developer roles abroad and remote. Happy to share more details or code samples.</p>
+    <div class="actions">
+      <a class="btn btn-primary" href="mailto:shaileshvbagade@gmail.com">Email me</a>
+      <a class="btn btn-ghost" href="https://www.linkedin.com/in/shailesh-bagade-b16627b0/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn btn-ghost" href="resume.pdf" download>Download resume</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">© 2026 Shailesh Bagade</div>
+</footer>
+
+</body>
+</html>
