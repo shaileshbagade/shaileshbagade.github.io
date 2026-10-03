@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Shailesh Bagade | Lead Salesforce Developer</title>
-<meta name="description" content="Shailesh Bagade - Lead Salesforce Developer with 8.5 years of experience in LWC, Apex, Health Cloud, Service Cloud and Sales Cloud.">
+<meta name="description" content="Shailesh Bagade - Lead Salesforce Developer with 8.5 years of experience in LWC, Apex, Health Cloud, Service Cloud and Sales Cloud. Author of The Product Tactics.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -42,7 +42,6 @@
     overflow: hidden;
   }
   .hero::after {
-    /* soft cloud shape, a nod to Salesforce */
     content: "";
     position: absolute;
     right: -120px; top: -140px;
@@ -135,7 +134,7 @@
   .focus p { color: var(--ink-soft); font-size: 16px; }
   .focus div { border-left: 3px solid var(--cloud); padding-left: 16px; }
 
-  /* Certification wall — the signature element */
+  /* Certifications */
   .cert-groups { display: grid; gap: 28px; }
   .cert-group h3 {
     font-family: var(--display);
@@ -157,7 +156,7 @@
   .cert-group.sf .cert { background: var(--sky); border-color: #B9D2F2; color: #123E7C; }
   .verify { margin-top: 24px; font-size: 15px; color: var(--ink-soft); }
 
-  /* Experience timeline (a real sequence, so a timeline fits) */
+  /* Experience timeline */
   .timeline { position: relative; padding-left: 28px; }
   .timeline::before {
     content: "";
@@ -203,6 +202,24 @@
   .awards strong { display: block; font-family: var(--display); font-size: 1.1rem; }
   .awards span { color: var(--ink-soft); font-size: 16px; }
 
+  /* Book */
+  .book-line { margin-top: 14px; color: #D3DDE8; }
+  .book-line a { color: #FFFFFF; font-weight: 600; }
+  .book-section { background: var(--sky); }
+  .book-grid { display: grid; grid-template-columns: 170px 1fr; gap: 40px; align-items: center; }
+  .book-cover {
+    width: 170px; aspect-ratio: 2 / 3;
+    border-radius: 4px 10px 10px 4px;
+    background: var(--ink);
+    box-shadow: 8px 10px 0 #B9D2F2;
+    overflow: hidden;
+    display: grid; place-items: center;
+    color: var(--white); font-family: var(--display); font-weight: 700;
+    text-align: center; padding: 16px; position: relative;
+  }
+  .book-cover img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .book-section .lead { margin-bottom: 22px; }
+
   /* Contact */
   .contact { background: var(--ink); color: var(--white); border-top: none; }
   .contact h2 { color: var(--white); }
@@ -216,6 +233,8 @@
     .hero-grid { grid-template-columns: 1fr; gap: 24px; }
     .photo { width: 130px; height: 130px; font-size: 42px; }
     .focus, .skills, .two-col { grid-template-columns: 1fr; }
+    .book-grid { grid-template-columns: 1fr; gap: 24px; }
+    .book-cover { width: 130px; }
     section { padding: 48px 0; }
     .contact-line span { display: block; }
     .contact-line span + span::before { content: none; }
@@ -224,7 +243,7 @@
   @media print {
     .hero, .contact, footer { background: #fff !important; color: #000 !important; }
     .hero::after, .actions { display: none; }
-    .intro, .contact-line, .contact-line a, .role { color: #000 !important; }
+    .intro, .contact-line, .contact-line a, .role, .book-line, .book-line a { color: #000 !important; }
   }
 </style>
 </head>
@@ -233,8 +252,6 @@
 <!-- ================= HERO ================= -->
 <header class="hero">
   <div class="wrap hero-grid">
-    <!-- PHOTO: upload your picture as "photo.jpg" to the same repository.
-         Until then, your initials are shown automatically. -->
     <div class="photo" aria-label="Photo of Shailesh Bagade">
       <img src="photo.jpg" alt="Shailesh Bagade" onerror="this.remove()">
       <span aria-hidden="true">SB</span>
@@ -245,24 +262,22 @@
       <p class="role">Lead Salesforce Developer | LWC, Apex &amp; Health Cloud</p>
       <p class="intro">
         8.5 years building Salesforce solutions for global clients in healthcare, insurance,
-        telecom and software. I design/work on Lightning Web Components, Apex, Integrations and integrations on
+        telecom and software. I design and build Lightning Web Components, Apex and integrations on
         Health Cloud, Service Cloud and Sales Cloud, for teams across the USA, UK and Europe.
       </p>
+      <!-- EDIT: replace YOUR_BOOK_LINK (3 places in this file) with your book's page -->
       <p class="book-line">
-        Author of <a href="producttactics.pdf" target="_blank" rel="noopener><i>The Product Tactics: Unfold Your Customer</i></a>
+        Author of <a href="YOUR_BOOK_LINK" target="_blank" rel="noopener"><i>The Product Tactics: Unfold Your Customer</i></a>
       </p>
       <div class="actions">
         <a class="btn btn-primary" href="mailto:shaileshvbagade@gmail.com">Email me</a>
-        <!-- EDIT: replace with your real LinkedIn URL -->
         <a class="btn btn-ghost" href="https://www.linkedin.com/in/shailesh-bagade-b16627b0/" target="_blank" rel="noopener">LinkedIn</a>
-        <!-- Upload your resume as "resume.pdf" to the repository -->
         <a class="btn btn-ghost" href="resume.pdf" download>Download resume</a>
       </div>
 
       <p class="contact-line">
         <span>Pune, India | Open to international roles</span>
         <span><a href="mailto:shaileshvbagade@gmail.com">shaileshvbagade@gmail.com</a></span>
-        <!-- Remove the next line if you prefer not to show your phone number publicly -->
         <span><a href="tel:+918275028550">+91 82750 28550</a></span>
       </p>
     </div>
@@ -283,12 +298,30 @@
       </div>
       <div>
         <h3>Industry clouds</h3>
-        <p>Health Cloud, Service Cloud, Sales Cloud for patient care, insurance enrolment and field operations.</p>
+        <p>Health Cloud, Service Cloud and Sales Cloud for patient care, insurance enrolment and field operations.</p>
       </div>
       <div>
         <h3>Release and DevOps</h3>
         <p>Multi-country metadata on Git with Jenkins, Azure, Copado and Flosum, certified across all three DevOps tools.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BOOK ================= -->
+<section id="book" class="book-section">
+  <div class="wrap book-grid">
+    <!-- Upload your book cover as "book-cover.jpg" to the repository -->
+    <div class="book-cover">
+      <img src="book-cover.jpg" alt="Cover of The Product Tactics" onerror="this.remove()">
+      <span aria-hidden="true">The Product Tactics</span>
+    </div>
+    <div>
+      <h2>The Product Tactics: Unfold Your Customer</h2>
+      <p class="lead">My book on how technology companies use customer psychology to build
+         habit-forming products. It's the same thinking I bring to designing Salesforce
+         experiences that users actually adopt.</p>
+      <a class="btn btn-primary" href="YOUR_BOOK_LINK" target="_blank" rel="noopener">Get the book</a>
     </div>
   </div>
 </section>
@@ -330,9 +363,8 @@
       </div>
     </div>
 
-    <!-- EDIT: replace both links with your real Trailhead and credential verification URLs -->
     <p class="verify">
-      Verify my credentials by searching "Shailesh Bagade" on 
+      Verify my credentials by searching "Shailesh Bagade" on the
       <a href="https://trailhead.salesforce.com/credentials/verification" target="_blank" rel="noopener">Salesforce credential verification page</a>
       or view my <a href="https://www.salesforce.com/trailblazer/sbagade" target="_blank" rel="noopener">Trailhead profile</a>.
     </p>
@@ -357,9 +389,9 @@
           <h4>Air Liquide <em>(UK, multi-region)</em></h4>
           <p>Care monitoring and respiratory equipment delivery for patients, with field agents, territories,
              appointments, vehicles and delivery orders managed across APAC, EMEA, France, Italy and Core regions.
-             Customised Flows, LWC, Apex, FSL and the Salesforce Mobile App, and managed country-specific metadata in Git.</p>
-          <div class="tags"><span>Apex Web Services</span><span>Rest APIs</span><span>LWC</span><span>Async / Apex</span><span>Flows</span><span>Sales Cloud</span><span>Git</span>
-          <span>Health Cloud</span></div>
+             Customised Flows, LWC, Apex and the Salesforce Mobile App to optimise field operations,
+             and managed country-specific metadata in Git.</p>
+          <div class="tags"><span>Apex Web Services</span><span>REST APIs</span><span>LWC</span><span>Async Apex</span><span>Flows</span><span>Sales Cloud</span><span>Health Cloud</span><span>Git</span></div>
         </div>
 
         <div class="project">
@@ -423,8 +455,7 @@
       </div>
       <div>
         <h3>Clouds and automation</h3>
-        <div class="tags"><span>Health Cloud</span><span>Service Cloud</span><span>Sales Cloud</span><span>Salesforce Flows</span><span>Salesforce Connect</span><span>Salesforce Headless 360</span>
-        <span>MCP</span><span>Claudeforce</span></div>
+        <div class="tags"><span>Health Cloud</span><span>Service Cloud</span><span>Sales Cloud</span><span>Salesforce Flows</span><span>Salesforce Connect</span><span>Salesforce Headless 360</span><span>MCP</span><span>Claudeforce</span></div>
       </div>
       <div>
         <h3>Integration and data</h3>
@@ -449,15 +480,13 @@
            object-specific timings, routes and availability, dynamic date and route selection, and live
            location tracking with Google Maps route visualisation.</p>
         <div class="tags"><span>LWC</span><span>LMS</span><span>Google Maps API</span></div>
-        <!-- EDIT: add a GitHub link if the code is public, e.g.
-        <p style="margin-top:12px"><a href="https://github.com/shaileshbagade/your-repo">View code on GitHub</a></p> -->
       </div>
     </div>
     <div>
       <h2>Achievements</h2>
       <ul class="awards">
-        <li><strong>Author, <i>The Product Tactics: Unfold Your Customer</i></strong>
-            <span>A book on how technology companies use customer psychology to build habit-forming products.</span></li>
+        <li><strong>Published author</strong>
+            <span><a href="YOUR_BOOK_LINK" target="_blank" rel="noopener"><i>The Product Tactics: Unfold Your Customer</i></a></span></li>
         <li><strong>Lightning component recognition</strong><span>Cognizant</span></li>
         <li><strong>Employee of the Month</strong><span>Accenture</span></li>
       </ul>
