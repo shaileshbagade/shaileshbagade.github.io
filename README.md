@@ -1,1 +1,1 @@
-Shailesh has 8.5 years building Salesforce solutions for global clients in healthcare, insurance, telecom and software. I design and build Lightning Web Components, Apex and integrations on Health Cloud, Service Cloud and Sales Cloud, for teams across the USA, UK and Europe.
+Shailesh has 8.5 years building Salesforce solutions for global clients in healthcare, insurance, telecom and software. I design and build Lightning Web Components, Apex and integrations on Health Cloud, Service Cloud and Sales Cloud, for teams across the USA, UK and Europe
